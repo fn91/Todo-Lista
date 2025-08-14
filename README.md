@@ -42,10 +42,3 @@ Una aplicación web minimalista, elegante y funcional para gestionar tus tareas 
 - Modo oscuro.
 - Soporte para múltiples listas.
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. ¡Úsalo, modifícalo y compártelo libremente!
-
----
-
-Desarrollado con ❤️ y café en 2025.
