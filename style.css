@@ -1,0 +1,139 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Usamos la nueva fuente */
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* Degradado suave de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenedor verticalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada y suave */
+    width: 100%;
+    max-width: 550px; /* Un poco más ancho */
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Transición para efectos hover */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
+}
+
+h1 {
+    color: #2c3e50; /* Color de título más oscuro y profesional */
+    font-size: 2.2em; /* Título un poco más grande */
+    margin-bottom: 30px;
+    font-weight: 600; /* Más negrita */
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 15px; /* Más espacio entre input y botón */
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 14px 20px; /* Más padding */
+    border: 2px solid #e0e6ed; /* Borde más visible y suave */
+    border-radius: 8px; /* Bordes más redondeados */
+    font-size: 1.1em;
+    outline: none;
+    transition: all 0.3s ease; /* Transición para enfoque */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+}
+
+#taskInput:focus {
+    border-color: #4CAF50; /* Verde vibrante al enfocar */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2); /* Sombra de enfoque */
+}
+
+#addTaskBtn {
+    background-color: #4CAF50; /* Verde vibrante */
+    color: white;
+    border: none;
+    padding: 14px 25px; /* Más padding */
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2); /* Sombra para el botón */
+}
+
+#addTaskBtn:hover {
+    background-color: #45a049; /* Verde un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño levantamiento */
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+#addTaskBtn:active {
+    transform: translateY(0); /* Vuelve a su posición al hacer clic */
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#taskList li {
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 15px 20px;
+    margin-bottom: 12px; /* Más espacio entre elementos */
+    border-radius: 8px; /* Bordes más redondeados */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición para hover y completado */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+#taskList li:hover {
+    background-color: #e9f5ee; /* Fondo suave al pasar el ratón */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra un poco más fuerte */
+    transform: translateX(5px); /* Pequeño desplazamiento */
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #95a5a6; /* Gris más suave para completado */
+    background-color: #f0f4f8; /* Fondo más claro para completado */
+    border-left: 5px solid #95a5a6; /* Borde izquierdo para indicar completado */
+    opacity: 0.8; /* Ligeramente transparente */
+}
+
+#taskList li.completed .delete-btn {
+    background-color: #e74c3c; /* Color más oscuro para el botón de eliminar de tareas completadas */
+}
+
+
+#taskList li button {
+    background-color: #e74c3c; /* Rojo más llamativo para eliminar */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em; /* Tamaño de fuente del botón */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 35px; /* Ancho mínimo para la 'X' */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#taskList li button:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Pequeño aumento de tamaño */
+}
